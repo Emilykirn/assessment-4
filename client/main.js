@@ -2,8 +2,7 @@ const complimentBtn = document.getElementById("complimentButton")
 const fortuneBtn = document.getElementById('fortune')
 const funnyBtn = document.getElementById('funny')
 const pictureBtn = document.getElementById('picture')
-
-
+const diceBtn = document.getElementById('diceroll')
 
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")
@@ -41,3 +40,13 @@ const getPicture = () => {
     } );
 };
 pictureBtn.addEventListener('click', getPicture)
+
+const rollDice = () => {
+    axios.get('http://localhost:4000/api/picture/')
+    .then(res => {
+        const data = res.data;
+        alert(data);
+    } );
+};
+diceBtn.addEventListener('click', rollDice)
+
