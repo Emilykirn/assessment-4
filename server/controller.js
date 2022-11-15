@@ -43,12 +43,12 @@ module.exports = {
 
 },
     getRollDice: (req, res) => {
-    const picture = [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`,`12`]
+    const dice = [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`,`12`]
 
-    let randomI = Math.floor(Math.random() * picture.length);
-    let randomPicture = picture[randomI];
+    let randomI = Math.floor(Math.random() * dice.length);
+    let randomRoll= dice[randomI];
 
-    res.status(200).send(randomPicture);
+    res.status(200).send(randomRoll);
 
 },
 
